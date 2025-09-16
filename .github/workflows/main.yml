@@ -99,9 +99,10 @@ jobs:
         id: build_package
         run: |
           cd ${{ github.workspace }}/main
-          make clean package SIDELOADING=1
+          make clean package SIDELOADING=1 ADDITIONAL_CFLAGS="-Wno-vla -Wno-vla-cxx-extension -Wno-error"
         env:
           THEOS: ${{ github.workspace }}/theos
+
 
       - name: Inject tweak into provided IPA
         run: |
