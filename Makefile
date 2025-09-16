@@ -5,7 +5,6 @@ THEOS_PACKAGE_SCHEME = roothide
 endif
 
 ARCHS = arm64
-ADDITIONAL_CFLAGS += -Wno-error=vla-cxx-extension
 INSTALL_TARGET_PROCESSES = YouTubeMusic
 TARGET = iphone:clang:16.5:13.0
 PACKAGE_VERSION = 2.3.1
